@@ -1,3 +1,6 @@
+import random
+
+
 class Tank(object):
     def __init__(self, name):
         self.name = name
@@ -27,12 +30,17 @@ class Tank(object):
 
     def explode(self):
         self.alive = False
+        tanques.remove(self)
         print(self.name, "explodes!")
 
 
+tanques = [Tank("Bob"), Tank("Jack"), Tank("Roger"), Tank("Trust"), Tank("Liberty")]
 
-meuTanque = Tank("Bob")
-meuTanque2 = Tank("Jack")
-meuTanque.fire_at(meuTanque2)
-print(meuTanque)
-print(meuTanque2)
+while len(tanques) > 1:
+    tanqueAtacante = random.choice(tanques)
+    tanquesAtacados = [item for item in tanques if item != tanqueAtacante]
+    tanqueAtacado = random.choice(tanquesAtacados)
+    tanqueAtacante.fire_at(tanqueAtacado)
+    print(f"{tanqueAtacante.name} atacou o {tanqueAtacado.name} deixando ele com armor = {tanqueAtacado.armor}")
+
+print(f"O vencedor foi {tanques[0]}")
