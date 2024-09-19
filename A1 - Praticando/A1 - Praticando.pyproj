@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a5ce69ac-15b0-42b2-b7ea-8c3912e8bae0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ARQUIVO EXTRA - tanque.py</StartupFile>
+    <StartupFile>Tanques.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,8 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="A1___Praticando.py" />
-    <Compile Include="ARQUIVO EXTRA - tanque.py" />
+    <Compile Include="Tanques.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
